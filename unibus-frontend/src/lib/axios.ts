@@ -2,8 +2,9 @@ import axios from 'axios';
 import { toast } from 'sonner';
 
 const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
+const cleanUrl = apiUrl.replace(/\/+$/, ''); // Remove any trailing slashes
 const api = axios.create({
-  baseURL: apiUrl.endsWith('/api') ? apiUrl : `${apiUrl}/api`,
+  baseURL: cleanUrl.endsWith('/api') ? cleanUrl : `${cleanUrl}/api`,
 });
 
 api.interceptors.request.use(
