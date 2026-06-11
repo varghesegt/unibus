@@ -3933,3 +3933,49 @@ Caused by: org.postgresql.util.PSQLException: FATAL: database "unibus" does not 
 2026-06-11 14:32:26,278 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2026-06-11 14:32:26,279 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2026-06-11 14:32:26,285 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 3 ms
+2026-06-11 14:47:28,386 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 9.0.1.Final
+2026-06-11 14:47:28,450 INFO o.s.b.StartupInfoLogger [main] Starting BackendApplication using Java 17.0.18 with PID 15260 (C:\Users\Asus\Downloads\BusMate\unibus-backend\target\classes started by Asus in C:\Users\Asus\Downloads\BusMate\unibus-backend)
+2026-06-11 14:47:28,452 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-06-11 14:47:28,453 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2026-06-11 14:47:29,216 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-11 14:47:29,386 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 152 ms. Found 8 JPA repository interfaces.
+2026-06-11 14:47:30,011 INFO o.s.b.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2026-06-11 14:47:30,031 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-11 14:47:30,035 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2026-06-11 14:47:30,035 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-11 14:47:30,105 INFO o.s.b.w.c.s.WebApplicationContextInitializer [main] Root WebApplicationContext: initialization completed in 1602 ms
+2026-06-11 14:47:30,256 INFO o.h.j.i.u.LogHelper [main] HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-11 14:47:30,318 INFO o.h.Version [main] HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-11 14:47:30,774 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-11 14:47:30,807 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2026-06-11 14:47:31,053 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/unibusdb user=SA
+2026-06-11 14:47:31,057 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2026-06-11 14:47:31,082 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-11 14:47:31,106 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator [main] HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/unibusdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: unibusdb/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-11 14:47:32,242 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-11 14:47:32,313 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-11 14:47:32,392 INFO o.s.d.j.r.q.QueryEnhancerFactories [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-11 14:47:32,620 DEBUG o.s.w.f.GenericFilterBean [main] Filter 'authTokenFilter' configured for use
+2026-06-11 14:47:33,374 INFO o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-06-11 14:47:33,482 WARN o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-11 14:47:34,321 INFO o.s.c.l.CompositeLog [main] Starting...
+2026-06-11 14:47:34,324 INFO o.s.c.l.CompositeLog [main] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@315a9738]]
+2026-06-11 14:47:34,325 INFO o.s.c.l.CompositeLog [main] Started.
+2026-06-11 14:47:34,326 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2026-06-11 14:47:34,359 INFO o.s.b.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path '/'
+2026-06-11 14:47:34,367 INFO o.s.b.StartupInfoLogger [main] Started BackendApplication in 6.53 seconds (process running for 7.117)
+2026-06-11 14:47:37,028 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-11 14:47:37,032 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2026-06-11 14:47:37,037 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 4 ms
+2026-06-11 14:48:34,328 INFO o.s.w.s.c.WebSocketMessageBrokerStats [MessageBroker-1] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
