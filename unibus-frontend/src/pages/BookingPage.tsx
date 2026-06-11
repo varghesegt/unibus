@@ -30,7 +30,9 @@ export default function BookingPage() {
     fetchBusDetails();
     
     // WebSocket Setup
-    const socket = new SockJS('http://localhost:8080/ws');
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
+    const baseUrl = apiUrl.replace(/\/api\/?$/, '').replace(/\/+$/, '');
+    const socket = new SockJS(`${baseUrl}/ws`);
     const stompClient = new Client({
       webSocketFactory: () => socket,
       debug: (str) => console.log(str),
