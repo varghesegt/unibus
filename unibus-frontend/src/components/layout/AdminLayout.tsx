@@ -40,21 +40,22 @@ export default function AdminLayout() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  React.useEffect(() => {
-    const userStr = localStorage.getItem("user");
-    if (!userStr) {
-      navigate("/login");
-      return;
-    }
-    try {
-      const user = JSON.parse(userStr);
-      if (!user.admin && !user.isAdmin) {
-        navigate("/dashboard");
-      }
-    } catch (e) {
-      navigate("/login");
-    }
-  }, [navigate]);
+  // Admin login requirement removed for demo purposes
+  // React.useEffect(() => {
+  //   const userStr = localStorage.getItem("user");
+  //   if (!userStr) {
+  //     navigate("/login");
+  //     return;
+  //   }
+  //   try {
+  //     const user = JSON.parse(userStr);
+  //     if (!user.admin && !user.isAdmin) {
+  //       navigate("/dashboard");
+  //     }
+  //   } catch (e) {
+  //     navigate("/login");
+  //   }
+  // }, [navigate]);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
