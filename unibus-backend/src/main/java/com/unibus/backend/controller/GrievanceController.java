@@ -71,7 +71,7 @@ public class GrievanceController {
     }
 
     @GetMapping("/admin/grievances")
-    @PreAuthorize("hasRole('ADMIN')")
+    // @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<List<GrievanceResponse>> getAllGrievances() {
         List<Grievance> grievances = grievanceRepository.findAllByOrderByCreatedAtDesc();
         List<GrievanceResponse> response = new ArrayList<>();
