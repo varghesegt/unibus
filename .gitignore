@@ -51,8 +51,7 @@ yarn-error.log*
 
 
 drizzle
-drizzle/*
-drizzle/meta/_journal.json\
+drizzle/meta/_journal.json
 drizzle/meta/
 .drizzle
 
