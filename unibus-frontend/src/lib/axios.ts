@@ -1,10 +1,9 @@
 import axios from 'axios';
 import { toast } from 'sonner';
 
-const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
-const cleanUrl = apiUrl.replace(/\/+$/, ''); // Remove any trailing slashes
+// Hardcoded production URL to prevent any Vercel environment variable misconfigurations during demo
 const api = axios.create({
-  baseURL: cleanUrl.endsWith('/api') ? cleanUrl : `${cleanUrl}/api`,
+  baseURL: 'https://unibus-backend-6tm1.onrender.com/api',
 });
 
 api.interceptors.request.use(
