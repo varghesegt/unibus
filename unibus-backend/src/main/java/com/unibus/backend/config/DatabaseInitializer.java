@@ -55,7 +55,10 @@ public class DatabaseInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // Do nothing. Users will create models and buses manually.
+        if (userRepository.count() == 0) {
+            System.out.println("Seeding database with default users and data...");
+            seedDatabase();
+        }
     }
 
     private void seedDatabase() throws Exception {
