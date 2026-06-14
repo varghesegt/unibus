@@ -54,6 +54,7 @@ public class SecurityConfig {
                                 .requestMatchers("/api/admin/**").permitAll()
                                 .requestMatchers("/api/bus/**").permitAll()
                                 .requestMatchers("/api/circulars").permitAll()
+                                .requestMatchers("/api/health/**").permitAll()
                                 .requestMatchers("/ws/**").permitAll()
                                 .anyRequest().authenticated()
                 );
