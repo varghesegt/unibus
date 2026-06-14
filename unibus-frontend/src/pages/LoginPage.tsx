@@ -9,8 +9,8 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    email: 'me2355@krce.ac.in',
+    password: 'Password123!'
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -72,7 +72,7 @@ export default function LoginPage() {
               type="email"
               required
               className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
-              placeholder="name@example.com"
+              placeholder="me2355@krce.ac.in"
               value={formData.email}
               onChange={e => setFormData({...formData, email: e.target.value})}
             />
@@ -83,7 +83,7 @@ export default function LoginPage() {
               type="password"
               required
               className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
-              placeholder="••••••••"
+              placeholder="Password123!"
               value={formData.password}
               onChange={e => setFormData({...formData, password: e.target.value})}
             />
@@ -97,6 +97,12 @@ export default function LoginPage() {
             {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : 'Sign In'}
           </button>
         </form>
+
+        <div className="mt-6 p-4 rounded-xl bg-blue-50 border border-blue-200 text-center">
+          <p className="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-1">Demo Credentials</p>
+          <p className="text-sm text-blue-600"><strong>Email:</strong> me2355@krce.ac.in</p>
+          <p className="text-sm text-blue-600"><strong>Password:</strong> Password123!</p>
+        </div>
 
         <p className="text-center text-slate-600 mt-8 text-sm">
           Don't have an account?{' '}
